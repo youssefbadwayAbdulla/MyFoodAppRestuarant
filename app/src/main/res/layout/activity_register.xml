@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.RegisterActivity">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foreground="@drawable/forbackground_design"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_restaurant_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/lobster"
+            android:text="@string/my_restaurant_app"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/_25sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias=".2" />
+
+        <TextView
+            android:id="@+id/_tv_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="#fff"
+            android:textSize="@dimen/_18sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_restaurant_register" />
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/et_register_name_non"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:backgroundTint="#cccccc"
+            android:textColorHint="#FFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/_tv_register"
+            app:layout_constraintWidth_percent=".9"
+            app:startIconDrawable="@drawable/account"
+            app:startIconTintMode="screen">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="#fff"
+                android:id="@+id/et_register_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name"
+                android:inputType="text"
+                android:textSize="@dimen/_16sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/non_email"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColorHint="#FFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/et_register_name_non"
+            app:layout_constraintVertical_bias=".0"
+            app:layout_constraintWidth_percent=".9"
+            app:startIconDrawable="@drawable/ic_baseline_email_24"
+            app:startIconTintMode="screen">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="#fff"
+                android:id="@+id/et_register_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                android:inputType="textWebEmailAddress"
+                android:textSize="@dimen/_16sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/non_password"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColorHint="#FFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/non_email"
+            app:layout_constraintVertical_bias=".0"
+            app:layout_constraintWidth_percent=".9"
+            app:startIconDrawable="@drawable/ic_baseline_lock_24"
+            app:startIconTintMode="screen">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:textColor="#fff"
+                android:id="@+id/et_register_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:inputType="textWebPassword"
+                android:textSize="@dimen/_16sdp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_register"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:onClick="register"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/register"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_18sdp"
+            app:cornerRadius="@dimen/_18sdp"
+            app:elevation="@dimen/_2sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/non_password"
+            app:layout_constraintVertical_bias=".5"
+            app:layout_constraintWidth_percent=".8" />
+
+        <TextView
+            android:id="@+id/tv_already_registered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/already_registered"
+            android:textAlignment="center"
+            android:textColor="#FBFBFB"
+            android:textSize="@dimen/_14sdp"
+
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_register" />
+
+        <TextView
+android:onClick="Login"
+            android:id="@+id/tv_sing_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/singin"
+            android:textAlignment="center"
+            android:textColor="#ff5353"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@id/tv_already_registered"
+            app:layout_constraintTop_toBottomOf="@id/btn_register" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

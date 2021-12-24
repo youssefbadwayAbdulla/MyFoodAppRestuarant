@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C1111111"
+        tools:context=".ui.home.HomeFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:textColor="#fff"
+                android:id="@+id/et_search_food"
+                android:layout_width="@dimen/_230sdp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/search_bg"
+                android:drawableLeft="@drawable/ic_baseline_search_24"
+                android:drawablePadding="@dimen/_10sdp"
+                android:fontFamily="@font/amita"
+                android:hint="Search Your Food..!"
+                android:padding="@dimen/_8sdp"
+                android:textColorHint="#fff"
+                android:textSize="@dimen/_13sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_15sdp"
+                android:background="@drawable/search_bg"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_baseline_person_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/et_search_food"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_hello_youssef"
+                android:textSize="@dimen/_18sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/amarante"
+                android:text="Hello Youssef"
+                android:textColor="#fff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_search_food"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:id="@+id/tv_what_do_you"
+                android:textSize="@dimen/_12sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_13sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:fontFamily="@font/amita"
+                android:text="What do you want ?"
+                android:textColor="#fff"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_hello_youssef"
+                tools:layout_editor_absoluteX="-1dp"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/home_hor_rv"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/tv_what_do_you"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+            <androidx.recyclerview.widget.RecyclerView
+                android:orientation="vertical"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                android:id="@+id/home_ver_rv"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/home_hor_rv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

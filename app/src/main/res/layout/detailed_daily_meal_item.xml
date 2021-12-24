@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_25sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/iv_detailed_item"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/coffe"
+                app:riv_corner_radius="@dimen/_20sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/detailed_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/amarante"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_24sdp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detailed_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/amarante"
+                    android:maxLines="2"
+                    android:singleLine="true"
+                    android:text="description"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_16sdp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/iv_start"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:src="@drawable/start" />
+
+                    <TextView
+                        android:id="@+id/detailed_ratting"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="5.0"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:src="@drawable/ic_baseline_access_time_24" />
+
+                    <TextView
+                        android:id="@+id/tv_detailed_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10:00 to 7:00"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_11ssp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+
+                        android:id="@+id/tv_detailed_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginTop="@dimen/_12sdp"
+                        android:fontFamily="@font/amarante"
+                        android:text="Price: 25EGP"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12ssp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.button.MaterialButton
+
+                        android:id="@+id/btn_detailed_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:layout_marginStart="8dp"
+                        android:text=" card"
+                        android:textAllCaps="false"
+                        app:cornerRadius="@dimen/_10sdp"
+                        app:icon="@drawable/ic_baseline_shopping_cart_24"
+                        app:layout_constraintBottom_toBottomOf="@id/tv_detailed_price"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/tv_detailed_price"
+                        app:layout_constraintTop_toTopOf="@+id/tv_detailed_price" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

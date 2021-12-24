@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_5sdp">
+
+        <ImageView
+            android:layout_margin="@dimen/_5sdp"
+            android:id="@+id/iv_dinner"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_190sdp"
+            android:foreground="@drawable/background_daily_meal"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_dinner"
+            app:layout_constraintVertical_bias=".3"
+            android:fontFamily="@font/amarante"
+            android:textSize="@dimen/_28sdp"
+            android:textColor="#fff"
+            android:text="Dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@id/iv_dinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_description_dinner"
+            android:fontFamily="@font/amita"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            app:layout_constraintTop_toBottomOf="@id/tv_dinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:textColor="#fff"
+            android:text="description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_discount_dinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:fontFamily="@font/amita"
+            android:text="Discount"
+            android:textColor="@color/purple_500"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_description_dinner" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
